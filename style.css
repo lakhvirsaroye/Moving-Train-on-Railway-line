@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.backgroud img {
+    width: 100%;
+    height: 99vh;
+}
+
+.train img {
+    height: 30%;
+    position: absolute;
+    bottom: 6%;
+    right: -30%;
+    animation: move-train 10s linear infinite;
+}
+
+@keyframes move-train {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-2000px);
+    }
+}
+
+@media (max-width: 450px) {
+
+
+    .train img{
+        animation-duration: 8s;
+    }
+
+    @keyframes move-train {
+        0% {
+            transform: translateX(200px);
+        }
+    
+        100% {
+            transform: translateX(-500px);
+        }
+    }
+    
+}
